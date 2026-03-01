@@ -1,0 +1,15 @@
+# The double asterisks (**) tell git to look in ANY subfolder
+**/[Ll]ibrary/
+**/[Tt]emp/
+**/[Oo]bj/
+**/[Bb]uild/
+**/[Bb]uilds/
+**/[Ll]ogs/
+**/UserSettings/
+
+# Ignore IDE junk
+**/*.csproj
+**/*.sln
+**/.vs/
+**/.vscode/
+.DS_Store
