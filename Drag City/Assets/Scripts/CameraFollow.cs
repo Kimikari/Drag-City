@@ -1,5 +1,7 @@
 using UnityEngine;
 
+// This is the script to handle car driving mechanics.
+// It currently needs work because the steering is a bit dense and hard to turn but easy to drift uncontrollably
 public class CameraFollow : MonoBehaviour
 {
     [Header("Target To Follow")]
