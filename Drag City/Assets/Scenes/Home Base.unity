@@ -176,7 +176,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6a7e5a640e7f8a045a755da73cec1b92, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 8.354589
+      value: 8.342
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6a7e5a640e7f8a045a755da73cec1b92, type: 3}
       propertyPath: m_LocalRotation.w
@@ -769,7 +769,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: dc678dfdf09978c4f8e8e4f99ca2a557, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.41
+      value: -0.483
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dc678dfdf09978c4f8e8e4f99ca2a557, type: 3}
       propertyPath: m_LocalPosition.y
@@ -959,6 +959,22 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d4ef3aeb4c7754640abfd027b17c9eb3, type: 3}
       propertyPath: m_Name
       value: Task1NPC
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: d4ef3aeb4c7754640abfd027b17c9eb3, type: 3}
+      propertyPath: m_Avatar
+      value: 
+      objectReference: {fileID: 9000000, guid: d4ef3aeb4c7754640abfd027b17c9eb3, type: 3}
+    - target: {fileID: 5866666021909216657, guid: d4ef3aeb4c7754640abfd027b17c9eb3, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: f53949930337458449779f2982cea0ab, type: 2}
+    - target: {fileID: 5866666021909216657, guid: d4ef3aeb4c7754640abfd027b17c9eb3, type: 3}
+      propertyPath: m_WarningMessage
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: d4ef3aeb4c7754640abfd027b17c9eb3, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
