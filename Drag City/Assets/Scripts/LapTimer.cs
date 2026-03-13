@@ -1,16 +1,16 @@
 using UnityEngine;
 using TMPro;
-using UnityEngine.SceneManagement; // We need this to change levels!
+using UnityEngine.SceneManagement; 
 
-// Keeps track of the time it take to finish each track
 public class LapTimer : MonoBehaviour
 {
     [Header("UI References")]
     public TextMeshProUGUI timerText;
 
-    [Header("Level Transition")]
-    public string nextSceneName = "Track2"; // Name of your second scene
-    public string timeSaveKey = "Track1Time"; // The secret ID used to save this specific time
+    [Header("Level Transition & Limits")]
+    public string nextSceneName = "Track2"; 
+    public string timeSaveKey = "Track1Time"; 
+    public float maxTimeLimit = 60f; // NEW: The time limit in seconds (e.g., 60 seconds)
 
     private float currentTime = 0f;
     private bool isTiming = false;
@@ -28,6 +28,12 @@ public class LapTimer : MonoBehaviour
         {
             currentTime += Time.deltaTime;
             UpdateTimerDisplay();
+
+            // NEW: Check if the player exceeded the time limit
+            if (currentTime >= maxTimeLimit)
+            {
+                RestartGame();
+            }
         }
     }
 
@@ -42,6 +48,7 @@ public class LapTimer : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        // Make sure the object crossing the line has the tag "Player"
         if (other.CompareTag("Player"))
         {
             // FIRST PASS: Start the race
@@ -65,7 +72,14 @@ public class LapTimer : MonoBehaviour
                 Debug.Log("Time Saved! Loading next track...");
                 SceneManager.LoadScene(nextSceneName);
             }
-
         }
+    }
+
+    // NEW: Reloads the current scene to restart the game
+    private void RestartGame()
+    {
+        Debug.Log("Time ran out! Restarting level...");
+        // This gets the name of the scene you are currently in and reloads it
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name); 
     }
 }
