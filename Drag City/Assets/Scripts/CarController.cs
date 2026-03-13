@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 // This is the script to handle car driving mechanics.
 // It currently needs work because the steering is a bit dense and hard to turn but easy to drift uncontrollably
@@ -20,7 +21,9 @@ public class CarController : MonoBehaviour
 
     private float horizontalInput;
     private float verticalInput;
-    private bool isBreaking;
+    private bool isTurbo;
+    private bool flag = false;
+    private bool    isBreaking;
     private Rigidbody carRb;
 
     void Start()
@@ -31,6 +34,8 @@ public class CarController : MonoBehaviour
         {
             carRb.centerOfMass = centerOfMass.localPosition;
         }
+
+        
     }
 
     void FixedUpdate()
@@ -38,13 +43,24 @@ public class CarController : MonoBehaviour
         GetInput();
         HandleMotor();
         HandleSteering();
+
+        if (SceneManager.GetActiveScene().buildIndex == 5)
+        {
+            if (Input.GetKey(KeyCode.Space) && flag == false)
+            {
+                Debug.Log("Turbo Activated!");
+                carRb.AddForce(transform.forward * 7500, ForceMode.Impulse);
+                flag = true;
+            }
+
+        }
     }
 
     private void GetInput()
     {
         horizontalInput = Input.GetAxis("Horizontal");
         verticalInput = Input.GetAxis("Vertical");
-        isBreaking = Input.GetKey(KeyCode.Space);
+        
     }
 
     private void HandleMotor()
@@ -70,4 +86,5 @@ public class CarController : MonoBehaviour
         frontLeft.steerAngle = currentSteerAngle;
         frontRight.steerAngle = currentSteerAngle;
     }
+
 }
