@@ -62,7 +62,7 @@ public class Dialog : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene("Scene_1");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
         }
     }

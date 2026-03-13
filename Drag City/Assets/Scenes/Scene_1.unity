@@ -1982,7 +1982,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 28b9324cbdb96d940b5b86d2c0c9d0cf, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 12.82
+      value: 13.07
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 28b9324cbdb96d940b5b86d2c0c9d0cf, type: 3}
       propertyPath: m_LocalRotation.w
@@ -12223,7 +12223,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerText: {fileID: 1875407986}
-  nextSceneName: Track2
   timeSaveKey: Track1Time
   maxTimeLimit: 60
 --- !u!65 &1680950692

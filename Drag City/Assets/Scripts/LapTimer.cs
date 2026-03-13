@@ -69,7 +69,14 @@ public class LapTimer : MonoBehaviour
 
                 // 2. Load the next scene
                 Debug.Log("Time Saved! Loading next track...");
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                if (SceneManager.GetActiveScene().buildIndex+1>=SceneManager.sceneCountInBuildSettings)
+                {
+                    SceneManager.LoadScene(0);
+                }
+                else
+                {
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                }
             }
         }
     }
