@@ -1845,6 +1845,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textComponent: {fileID: 1699297711}
   lines:
+  - Welcome to drag city.
+  - If you want to survive, you have to race.
   - 'Girl: HEY NOOB'
   - 'Girl: I challenge you to a race.'
   - "Girl: And because you don\u2019t have a car, you can borrow one of mine."
@@ -4283,7 +4285,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d4ef3aeb4c7754640abfd027b17c9eb3, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.9982734
+      value: 1.7482734
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d4ef3aeb4c7754640abfd027b17c9eb3, type: 3}
       propertyPath: m_LocalRotation.w
