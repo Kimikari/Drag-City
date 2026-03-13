@@ -1845,15 +1845,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textComponent: {fileID: 1699297711}
   lines:
-  - 'Doctor: No. HOW?'
-  - 'Doctor: HOW DID YOU WIN?'
-  - "King: You\u2019re good."
-  - "King: I haven\u2019t seen a decent racer come here in 20 years."
-  - "King: Let\u2019s race, winner is king of drag city."
-  - 'Doctor: I installed a turbo in your car.'
-  - 'Doctor: But you can only use it once.'
-  - 'Doctor: No one had the skills to use it.'
-  - 'Doctor: But I think you can.'
+  - 'King: NO!'
+  - 'King: YOU CHEATED!'
+  - 'King: YOU USED TURBO!'
+  - 'Doctor: So did you.'
+  - "Asian girl: YEA! WE\u2019RE TIRED OF YOU!"
+  - You are the new King of drag city!
   textSpeed: 0.1
 --- !u!1001 &458161765
 PrefabInstance:
