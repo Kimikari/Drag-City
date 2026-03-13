@@ -8,7 +8,6 @@ public class LapTimer : MonoBehaviour
     public TextMeshProUGUI timerText;
 
     [Header("Level Transition & Limits")]
-    public string nextSceneName = "Track2"; 
     public string timeSaveKey = "Track1Time"; 
     public float maxTimeLimit = 60f; // NEW: The time limit in seconds (e.g., 60 seconds)
 
@@ -70,7 +69,7 @@ public class LapTimer : MonoBehaviour
 
                 // 2. Load the next scene
                 Debug.Log("Time Saved! Loading next track...");
-                SceneManager.LoadScene(nextSceneName);
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             }
         }
     }
