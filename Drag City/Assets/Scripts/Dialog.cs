@@ -60,10 +60,19 @@ public class Dialog : MonoBehaviour
             textComponent.text = string.Empty;
             StartCoroutine(TypeLine());
         }
-        else
+        else 
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            int currentIndex = SceneManager.GetActiveScene().buildIndex;
+            int lastIndex = SceneManager.sceneCountInBuildSettings - 1;
 
+            if (currentIndex >= lastIndex)
+            {
+                SceneManager.LoadScene(0);
+            }
+            else
+            {
+                SceneManager.LoadScene(currentIndex + 1);
+            }
         }
     }
 }
